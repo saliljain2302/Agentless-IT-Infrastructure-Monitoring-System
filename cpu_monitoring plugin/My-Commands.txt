@@ -1,0 +1,6 @@
+Below are the commands I fired on my virtual machine.
+
+sudo g++ -DMYSQL_DYNAMIC_PLUGIN -Wall -shared -I /mysql-5.6.22/include -I /mysql-5.6.22/regex -I /mysql-5.6.22/sql -o CpuDesc.so CpuInfoDocPack.cc 
+sudo cp CpuDesc.so /usr/local/mysql/lib/plugin/
+install plugin innodb_disk_INFO soname 'CpuDesc.so';
+select * from information_schema.INNODB_Cpu_INFO;

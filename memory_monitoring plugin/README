@@ -1,0 +1,8 @@
+CPU_INFO Plugin, Version 0
+
+This MYSQL plugin is licensed under GNU General Public License. 
+The plugin is part of work I have completed as part of internship (Oct 2014-Apr 2015) in DELL. 
+This plugin is developed to monitor memory status of the MYSQL database server running on remotely located machine using MYSQL client at monitoring machine.
+The current directory consist of two source file MemoryInfoDocPack(uncommented source file) & MemoryInfoDocPack(commented source file).
+For installation information please refer to INSTALL-SOURCE  file in current directory.
+

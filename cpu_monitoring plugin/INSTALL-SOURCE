@@ -1,0 +1,24 @@
+Installation of plugin (from source code) on MYSQL database server.
+First we need to compile and and execute the plugin to generate the object file (.so)
+
+The prerequisite to compile & execute the plugin source file are :-
+--> mysql-5.1 or newer
+--> Compatible gnu c++ compiler
+
+Compile & Execute the plugin source code .cc file available in current directory using the following command.
+g++ -DMYSQL_DYNAMIC_PLUGIN -Wall -shared
+ -I /home/salil_jain/mysql-5.6.22/include 
+ -I /home/salil_jain/mysql-5.1.22-rc/regex
+ -I /home/salil_jain/mysql-5.1.22/sql  
+ -o cpu_info.so cpu_info.cc
+
+The generated .so file must be copied to the directory /usr/local/mysql/lib/mysql/plugin .
+
+To install the plugin in running MYSQL server just fire the below command.
+INSTALL PLUGIN cpu_info SONAME 'cpu_info.so' ;
+
+To check whether the plugin is installed at server or not use the command
+SELECT * from information_schema.plugins;
+ 
+To fire select command on the plugin installed use command
+SELECT * from information_schema.cpu_info;
