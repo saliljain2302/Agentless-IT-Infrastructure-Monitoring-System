@@ -135,7 +135,7 @@ mysql_declare_plugin(mysql_cpu_info)//Start macro
 {
   MYSQL_INFORMATION_SCHEMA_PLUGIN,//Plugin Type        
   &mysql_cpu_info_plugin,                  
-  "INNODB_CPU_INFO",//Plugin_Name                                   
+  "CPU_INFO",//Plugin_Name                                   
   "SALIL JAIN ",//Author Name
   "Monitor CPU Status at Server",//Plugin Description                                
   PLUGIN_LICENSE_GPL,//Licensed Under                         
