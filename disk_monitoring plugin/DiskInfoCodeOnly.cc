@@ -145,7 +145,7 @@ mysql_declare_plugin(mysql_is_hello)
 {
   MYSQL_INFORMATION_SCHEMA_PLUGIN,                 
   &mysql_is_hello_plugin,                          
-  "DISK_INFO1",                                   
+  "DISK_INFO",                                   
   "SALIL JAIN ",
   "Monitor Memory Status at Server",                                   
   PLUGIN_LICENSE_GPL,                              
